@@ -168,7 +168,7 @@ export const resolvers = {
       const personIndex = people.findIndex((p) => p.id === id);
       if (personIndex === -1) throw new Error("Person not found");
       const deletedPerson = people.splice(personIndex, 1)[0];
-      cars = cars.filter((car) => car.personId !== id); // Remove cars associated with the person
+      cars = cars.filter((car) => car.personId !== id); 
       return deletedPerson;
     },
     addCar: (parent, { year, make, model, price, personId }) => {
